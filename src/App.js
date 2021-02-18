@@ -40,13 +40,6 @@ function App(props) {
         NASA Photo Of The Day <span role="img" aria-label='go!'>🚀</span>
       </h1>
       {
-
-      // <Show potd = {potd}/>
-      // Array.from(potd).map(obj => {
-      //   return <Show key={obj.date} potd = {potd}/>
-      // })
-      }
-      {
         potd && <POTD potd={potd} closePOTD={closePOTD}/>
       }
 
