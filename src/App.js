@@ -6,19 +6,28 @@ import axios from 'axios'
 import POTD from './POTD'
 import Expand from './Expand'
 import theme from './theme'
-import styled from 'styled-components'
-
+import styled, {keyframes} from 'styled-components'
 
 const StyledPOTD = styled.div`
     color: ${props => props.theme.primaryColor};
+    font-family: Monospace;
     background-color: darkgray;
-    &:hover .explanation p{
+    .explanation{
+      &:hover p{
       background-color: ${props => props.theme.secondaryColor};
-      transition: 5s ease-in-out;
+      border: 3px solid ${props => props.theme.black};
+      transition: 1s ease-in-out;
+      }
     }
-    transition: 5s ease-in-out;
+    transition: 1s ease-in-out;
     h1 {
       color:black;
+    }
+    button {
+      &:hover{
+        transform: scale(1.5);
+        transition: .5s ease-in-out;
+      }transition: .5s ease-in-out;
     }
 `;
 
