@@ -1,3 +1,9 @@
+*{
+  background-color: black;
+  color: white;
+  font-family: Monospace
+}
+
 .App {
   text-align: center;
 }

@@ -17,8 +17,8 @@ export default function POTD(props){
                 </div>
                 {<Expand />}
                 
-                <p>{potd.copyright} {potd.date}</p>
-                <p>{potd.title}</p>
+                <p>{potd.copyright}<span> &#169;</span>, {potd.date}</p>
+                <h2>{potd.title}</h2>
                 <div className = 'explanation'>
                     <p>{potd.explanation}</p>
                 </div>

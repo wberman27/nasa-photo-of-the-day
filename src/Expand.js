@@ -6,8 +6,8 @@ export default function Expand(){ //this function returns the button that will i
  
     return(
         <div className='expand'>
-            <button onClick = {(e) => document.querySelector('.hdUrl') && document.querySelector('.hdUrl').classList.toggle('big')}>
-                Full Size Photo
+            <button className = 'toggleButton' onClick = {(e) => document.querySelector('.hdUrl') && document.querySelector('.hdUrl').classList.toggle('big')}>
+                Toggle Photo Size
             </button>
         </div>
     )

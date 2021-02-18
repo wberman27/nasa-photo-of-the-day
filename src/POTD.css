@@ -10,4 +10,11 @@
 }
 .explanation p{
     width:70%;
+    font-size:.8rem;
+}
+.toggleButton{
+    border: solid white;
+}
+.toggleButton:hover{
+    cursor:pointer;
 }
