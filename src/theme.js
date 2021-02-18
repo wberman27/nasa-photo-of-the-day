@@ -1,7 +1,7 @@
 export default {
     primaryColor: 'purple',
-    secondaryColor: 'orange',
-    tertiaryColor: 'royalblue',
+    secondaryColor: 'royalblue',
+    tertiaryColor: 'darkgray',
     black: 'black',
     white: 'white',
     breakpointMobile: '(max-width : 550px)',

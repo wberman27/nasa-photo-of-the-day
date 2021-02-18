@@ -4,30 +4,49 @@ import "./App.css";
 import {BASE_URL, API_KEY} from './constants'
 import axios from 'axios'
 import POTD from './POTD'
-import Expand from './Expand'
 import theme from './theme'
 import styled, {keyframes} from 'styled-components'
+
 
 const StyledPOTD = styled.div`
     color: ${props => props.theme.primaryColor};
     font-family: Monospace;
     background-color: darkgray;
+    img{
+      margin-top:5%;
+      border-radius: 10px;
+    }
     .explanation{
       &:hover p{
       background-color: ${props => props.theme.secondaryColor};
-      border: 3px solid ${props => props.theme.black};
+      border: 3px solid ${props => props.theme.white};
+      border-radius: 5px;
       transition: 1s ease-in-out;
-      }
+      transform: scale(1.1);
+      padding:1%;
+      }color:${props => props.theme.white};
     }
     transition: 1s ease-in-out;
-    h1 {
-      color:black;
+    h1 { //animation - slides the header onto page from the left to the center
+        position: absolute;
+        left: -100%;
+        width: 100%;
+        animation: slide 2s forwards;
+        color:black;
+      }
+    @keyframes slide{
+      100% {left: 0; }
+    }
+    h2 {
+      color:gold;
+    }
     }
     button {
       &:hover{
         transform: scale(1.5);
         transition: .5s ease-in-out;
       }transition: .5s ease-in-out;
+      margin-top:1%;
     }
 `;
 
