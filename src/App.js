@@ -31,24 +31,11 @@ function App(props) {
   }, [])
 
 
-
-  const changeButton = () =>{
-    const photoDiv = document.querySelector('.hdUrl')
-    photoDiv.classList.add('big')
-  }
-
-
-
-
-
-
-
   return (
     <div className="App">
       <h1>
         NASA Photo Of The Day <span role="img" aria-label='go!'>🚀</span>
       </h1>
-      {<Expand changeButton = {changeButton}/>}
       {
         potd && <POTD potd={potd}/> //return onto page the POTD component if we have truthy potd. then pass POTD props
       }

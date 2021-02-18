@@ -15,6 +15,7 @@ export default function POTD(props){
                 <div className = 'hdUrl'>
                     <img src={potd.hdurl} alt={potd.title}></img>
                 </div>
+                {<Expand />}
                 
                 <p>{potd.copyright} {potd.date}</p>
                 <p>{potd.title}</p>

@@ -1,11 +1,8 @@
 .hdUrl img{
     width:40%;
 }
-.hdUrl big img{
+.hdUrl.big img{
     width:80%;
-}
-.expand {
-    margin-bottom:1%;
 }
 .explanation{
     display:flex;
@@ -13,5 +10,4 @@
 }
 .explanation p{
     width:70%;
-
 }
