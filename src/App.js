@@ -5,9 +5,22 @@ import {BASE_URL, API_KEY} from './constants'
 import axios from 'axios'
 import POTD from './POTD'
 import Expand from './Expand'
+import theme from './theme'
+import styled from 'styled-components'
 
 
-
+const StyledPOTD = styled.div`
+    color: ${props => props.theme.primaryColor};
+    background-color: darkgray;
+    &:hover .explanation p{
+      background-color: ${props => props.theme.secondaryColor};
+      transition: 5s ease-in-out;
+    }
+    transition: 5s ease-in-out;
+    h1 {
+      color:black;
+    }
+`;
 
 
 function App(props) {
@@ -32,6 +45,7 @@ function App(props) {
 
 
   return (
+    <StyledPOTD>
     <div className="App">
       <h1>
         NASA Photo Of The Day <span role="img" aria-label='go!'>🚀</span>
@@ -41,6 +55,7 @@ function App(props) {
       }
 
     </div>
+    </StyledPOTD>
   );
 }
 

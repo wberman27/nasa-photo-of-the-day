@@ -1,6 +1,19 @@
 import React  from "react";
 import Expand from './Expand'
 import './POTD.css'
+import styled, {keyframes} from 'styled-components'
+import theme from './theme'
+
+
+const StyledPOTD = styled.div`
+    color: ${props => props.theme.primaryColor};
+
+
+
+
+`;
+
+
 
 export default function POTD(props){
     const { potd } = props //set props, from App
