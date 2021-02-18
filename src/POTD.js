@@ -14,12 +14,19 @@ export default function POTD(props){
             {
                 potd &&
                 <>
-                <img src={potd.hdurl} alt={potd.title}></img>
+                
+                <div className = 'hdurlsmall'>
+                <Show />
+                    <img src={potd.hdurl} alt={potd.title}></img>
+                </div>
                 <p>{potd.copyright} {potd.date}</p>
                 <p>{potd.title}</p>
-                <p>{potd.explanation}</p>
+                <div className = 'explanation'>
+                    <p>{potd.explanation}</p>
+                </div>
                 </>
             }
         </div>
+
     )
 }

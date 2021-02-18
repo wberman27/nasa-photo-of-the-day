@@ -1,18 +1,17 @@
 import userEvent from "@testing-library/user-event";
 import React, {useState, useEffect} from "react";
 import POTD from './POTD'
+import './POTD.css'
 
-
-export default function Show(props){
-const {openPOTD} = props
-
+export default function Expand(){
     return(
-        <div className='show'>
-        {props}
-        <button onClick={() => openPOTD(props)}>
-            Explore
-        </button>
+        <div className='expand'>
+            
+            <button onClick={(e) => 
+                document.querySelector('.hdurlsmall').className === 'hdurl'
+                }>           
+                Expand
+            </button>
         </div>
     )
-
 }

@@ -1,3 +1,17 @@
-img{
+.hdurlsmall img{
+    width:10%;
+}
+.hdurl img{
     width:50%;
+}
+.expand {
+    margin-bottom:1%;
+}
+.explanation{
+    display:flex;
+    justify-content: center;
+}
+.explanation p{
+    width:70%;
+
 }
