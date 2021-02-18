@@ -1,24 +1,21 @@
-import userEvent from "@testing-library/user-event";
-import React, {useState, useEffect} from "react";
-import {BASE_URL, API_KEY} from './constants'
-import axios from 'axios'
-import Show from './Show'
-import App from "./App";
+import React  from "react";
+import Expand from './Expand'
 import './POTD.css'
 
 export default function POTD(props){
-    const { potd, closePOTD } = props
+    const { potd } = props //set props, from App
 
     return (
         <div className = 'container'>
-            {
+            { //display on page if potd is truthy
+              //Expand is returned here for the expand button
                 potd &&
                 <>
                 
-                <div className = 'hdurlsmall'>
-                <Show />
+                <div className = 'hdUrl'>
                     <img src={potd.hdurl} alt={potd.title}></img>
                 </div>
+                
                 <p>{potd.copyright} {potd.date}</p>
                 <p>{potd.title}</p>
                 <div className = 'explanation'>

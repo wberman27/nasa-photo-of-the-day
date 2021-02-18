@@ -4,7 +4,7 @@ import "./App.css";
 import {BASE_URL, API_KEY} from './constants'
 import axios from 'axios'
 import POTD from './POTD'
-import Show from './Show'
+import Expand from './Expand'
 
 
 
@@ -12,18 +12,15 @@ import Show from './Show'
 
 function App(props) {
 
-  const [potd, setPOTD] = useState([])
+  const [potd, setPOTD] = useState([]) //slice of state
   
-  const closePOTD = () =>{
-    setPOTD(null)
-  }
 
   useEffect(() => {
     const fetchData = () =>{
       axios
       .get(`${BASE_URL}?api_key=${API_KEY}`)
       .then(res =>{
-        setPOTD(res.data)
+        setPOTD(res.data) //sets potd to be the data from API 
       })
       .catch(err =>{
         console.log(err)
@@ -34,13 +31,26 @@ function App(props) {
   }, [])
 
 
+
+  const changeButton = () =>{
+    const photoDiv = document.querySelector('.hdUrl')
+    photoDiv.classList.add('big')
+  }
+
+
+
+
+
+
+
   return (
     <div className="App">
       <h1>
         NASA Photo Of The Day <span role="img" aria-label='go!'>🚀</span>
       </h1>
+      {<Expand changeButton = {changeButton}/>}
       {
-        potd && <POTD potd={potd} closePOTD={closePOTD}/>
+        potd && <POTD potd={potd}/> //return onto page the POTD component if we have truthy potd. then pass POTD props
       }
 
     </div>
