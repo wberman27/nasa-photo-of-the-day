@@ -1,0 +1,21 @@
+.hdUrl img{
+    width:40%;
+}
+.hdUrl.big img{
+    width:80%;
+}
+.explanation{
+    display:flex;
+    justify-content: center;
+}
+.explanation p{
+    width:70%;
+    font-size:.8rem;
+}
+.toggleButton{
+    border: solid white;
+    border-radius: 5px;
+}
+.toggleButton:hover{
+    cursor:pointer;
+}
