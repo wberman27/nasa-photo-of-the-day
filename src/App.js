@@ -13,14 +13,9 @@ import Show from './Show'
 function App(props) {
 
   const [potd, setPOTD] = useState([])
-  const [currentPOTD, setCurrentPOTD] = useState(null)
   
-  const openPOTD = data => {
-    setCurrentPOTD(data)
-  }
-
   const closePOTD = () =>{
-    setCurrentPOTD(null)
+    setPOTD(null)
   }
 
   useEffect(() => {
@@ -44,11 +39,13 @@ function App(props) {
       <h1>
         NASA Photo Of The Day <span role="img" aria-label='go!'>🚀</span>
       </h1>
-      {potd.map(obj => {
-        return <Show key={obj.id} openPOTD = {openPOTD}/>
-      })}
       {
-        currentPOTD && <POTD potd={currentPOTD} close={closePOTD} />
+      Array.from(potd).map(obj => {
+        return <Show key={obj.date} potd = {potd}/>
+      })
+      }
+      {
+        potd && <POTD potd={potd} closePOTD={closePOTD}/>
       }
 
     </div>
